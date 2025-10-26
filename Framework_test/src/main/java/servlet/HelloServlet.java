@@ -1,9 +1,11 @@
 package servlet;
 import java.io.*;
 import jakarta.servlet.http.*;
+import annotation.FieldInfo;
 
 public class HelloServlet extends HttpServlet {
 
+    @FieldInfo(name = "message", type = "String", required = true)
     String message;
 
     public void init() {
